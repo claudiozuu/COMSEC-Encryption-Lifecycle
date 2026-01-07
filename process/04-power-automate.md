@@ -1,13 +1,22 @@
-# Step 3 — Dashboard Alerts & Visualization
+# Step 4 — Automated Notifications
 
 ## Objective
-Surface key expiration risk in a leadership-readable format.
+Automate notification when encryption keys approach expiration.
 
-## Implementation Summary
-- Used DAX measures in KPI and table visuals
-- Highlighted keys nearing expiration
-- Pinned visuals to a Power BI dashboard
-- Configured data-driven alerts based on risk thresholds
+## Automation Logic
+- Daily recurrence (1430 HST or your preffered Time zone)
+- Query Power BI dataset:
+      1. Select Power BI
+      2. Run a query against a dataset
+      3. Choose your workspace where you keep the table
+      4. Chose your dataset
+      5. Input Query text 
+- If expiring keys > 0, send email notification
+- Prevent alert fatigue by limiting to once per day
+
+## Key Measures for Power Automate 
+- Query text
+- Condition: Function Expression
 
 ## Outcome
-Real-time visibility into cryptographic risk without manual monitoring.
+Sustained compliance monitoring without continuous human intervention.
