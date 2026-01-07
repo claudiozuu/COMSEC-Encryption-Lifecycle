@@ -4,6 +4,7 @@
 Transform raw COMSEC key inventory data into a clean, structured dataset suitable for compliance monitoring and automation.
 
 ## Actions Performed
+- Use a Excel CSV file 
 - Renamed columns for clarity and consistency
 - Standardized expiration date formats
 - Removed blank and non-actionable records
