@@ -22,7 +22,7 @@ Dataset → Power BI (DAX measures + dashboard KPI) → Power Automate (daily re
 
 ## Project Status
 Completed internal proof-of-concept for portfolio demonstration.
-Not actively maintained.
+Actively maintained monthly. 
 
 ## Disclaimer
 All data is synthetic or redacted.
