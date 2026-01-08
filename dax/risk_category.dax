@@ -1,0 +1,6 @@
+Risk Category = 
+IF([Days Until Expiration] <= 0, "Expired",
+IF([Days Until Expiration] <= 5, "High Risk",
+IF([Days Until Expiration] <= 10, "Medium Risk",
+IF([Days Until Expiration] <= 30, "Low Risk",
+IF([Days Until Expiration] <= 180, "Low Risk")))))
