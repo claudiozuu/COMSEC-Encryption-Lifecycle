@@ -117,5 +117,3 @@ FILTER(
 
 Conditional Expression = 
 length(body('Run_a_query_against_a_dataset')?['FirstTableRows']) is greater than 0
-
-
