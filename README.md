@@ -62,26 +62,33 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 ## Screenshots
 
 ### Power Automate – Recurrence Schedule
-![Recurrence Schedule](images/recurrence_schedule.png)
+![Recurrence Schedule](images/Reccurence%20Schedule%20.png)
 
 ### Power Automate – Run a Query Against a Dataset (DAX Filter)
-![Run a Query](images/run_query_dataset.png)
+![Run a Query](images/Data%20Analysis%20Expression%20(DAX)%20Run%20a%20query%20against%20a%20Dataset%20-POWER%20BI.png)
 
 ### Power Automate – Condition Expression (Only Email if Rows Exist)
-![Condition Expression](images/Condition Expression Part 1.png) 
-![Condition Expression (Detail)](images/condition_expression_part_2.png)
+![Condition Expression](images/Condition%20Expression%20Part%201.png)  
+![Condition Expression (Detail)](images/Condition%20expression%20Part%202.png)
 
 ### Power BI – Days Until Expiration
-![Days Until Expiration](images/dax_days_until_expiration.png)
+![Days Until Expiration](images/Days%20Until%20Expiration.png)
 
 ### Power BI – Expired Flag
-![Expired Flag](images/dax_expired_flag.png)
+![Expired Flag](images/Expired%20Flag.png)
 
 ### Power BI – Risk Category
-![Risk Category](images/dax_risk_category.png)
+![Risk Category](images/Risk%20Category.png)
 
 ### Power BI – Report Visuals / Dashboard View
-![Report Visuals](images/report_visuals.png)
+![Report Visuals](images/Report%20Visuals%20.png)
+
+---
+
+## Output
+
+### Outlook Email Alert (Action Required)
+![Result of Email Automation](images/Result%20of%20Email%20Automation%20.png)
 
 ---
 
