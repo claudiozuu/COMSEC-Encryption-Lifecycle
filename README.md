@@ -1,6 +1,6 @@
 # COMSEC Encryption Automation (Power BI + Power Automate)
 
-This project is an **automated COMSEC key-expiration monitoring and alerting system** built using **Power BI** and **Power Automate**. It takes raw COMSEC tracker data, cleans and standardizes it, calculates expiration risk using DAX, and then runs a scheduled query against the published Power BI dataset. If any keys are expiring within a defined threshold (ex: **≤ 7 days**), the flow automatically sends an **Outlook email alert**—no manual checks required.
+This project is an **automated COMSEC key-expiration monitoring and alerting system** built using **Power BI** and **Power Automate**. It takes raw COMSEC tracker data, cleans and standardizes it inside Power BI, calculates expiration risk using DAX, and then runs a scheduled query against the published Power BI dataset. If any keys are expiring within a defined threshold (ex: **≤ 7 days**), the flow automatically sends an **Outlook email alert**—no manual checks required.
 
 > **Purpose:** Reduce expired/at-risk COMSEC keys by turning the tracker into an automated, repeatable alert workflow that supports continuity, readiness, and leadership visibility.
 
@@ -10,14 +10,14 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 
 ![Workflow Diagram](images/workflow_overview.png)
 
-### **1. Raw Data → Clean Data (Power Query)**
+### **1. Raw Data → Clean Data (Power BI Data Prep)**
 - Imports COMSEC tracker data (Excel/CSV export).
 - Standardizes column types (especially **EXPIRE DATE**).
 - Removes inconsistencies (nulls/format issues) to ensure reliable automation.
 
 ### **2. Power BI Expiration Intelligence (DAX)**
-- **Days Until Expiration** (date math from TODAY())  
-- **Expired Flag** (Expired vs Active)  
+- **Days Until Expiration** (date math from TODAY())
+- **Expired Flag** (Expired vs Active)
 - **Risk Category** (Expired / High / Medium / Low)
 
 ### **3. Power Automate Scheduled Monitoring**
@@ -34,7 +34,7 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 ## How It Works (Workflow Overview)
 
 1. **Raw COMSEC Data (Excel/CSV Export)** – initial tracker data source.  
-2. **Data Cleaning + Standardization (Power Query)** – prepares data for accurate calculations and automation.  
+2. **Data Cleaning + Standardization (Power BI)** – prepares data for accurate calculations and automation.  
 3. **Power BI Model + DAX Calculations** – creates expiration metrics and risk labels.  
 4. **Publish to Power BI Service** – creates the dataset used by automation.  
 5. **Power Automate Recurrence** – runs the workflow on schedule.  
@@ -49,9 +49,8 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 | Component | Purpose |
 |----------|---------|
 | **Raw Excel/CSV Export** | Source COMSEC tracker data |
-| **Power Query** | Clean + standardize data types/format |
 | **Power BI Dataset** | Hosts the model + calculations |
-| **DAX Calculations** | Days Until Expiration, Expired Flag, Risk Category |
+| **DAX Calculations** | Days Until Expiration, **Expired Flag**, **Risk Category** |
 | **Power Automate (Recurrence)** | Schedules daily automation runs |
 | **Run a query against a dataset** | Pulls only at-risk keys from the dataset |
 | **Condition** | Only emails when results exist |
@@ -74,10 +73,10 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 ### Power BI – Days Until Expiration
 ![Days Until Expiration](images/Days%20Until%20Expiration.png)
 
-### Power BI – Expired Flag
+### Power BI – **Expired Flag**
 ![Expired Flag](images/Expired%20Flag.png)
 
-### Power BI – Risk Category
+### Power BI – **Risk Category**
 ![Risk Category](images/Risk%20Category.png)
 
 ### Power BI – Report Visuals / Dashboard View
