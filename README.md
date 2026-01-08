@@ -68,7 +68,7 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 ![Run a Query](images/run_query_dataset.png)
 
 ### Power Automate – Condition Expression (Only Email if Rows Exist)
-![Condition Expression](images/condition_expression_part_1.png)  
+![Condition Expression](images/Condition Expression Part 1.png) 
 ![Condition Expression (Detail)](images/condition_expression_part_2.png)
 
 ### Power BI – Days Until Expiration
