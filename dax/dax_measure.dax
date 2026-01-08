@@ -1,0 +1,7 @@
+CALCULATE(
+
+    COUNTROWS('COMSEC DATA'),
+
+    'COMSEC DATA'[Days Until Expiration] <=5
+
+)
