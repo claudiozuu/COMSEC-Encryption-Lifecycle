@@ -92,9 +92,30 @@ This project is an **automated COMSEC key-expiration monitoring and alerting sys
 
 ---
 
-## Power BI: DAX Calculations
+## Power BI and Power Automate: DAX Calculations + Dataset Query + Condition Logic
 
-### **Days Until Expiration**
 ```DAX
 Days Until Expiration =
 DATEDIFF(TODAY(), 'HHC COMSEC'[EXPIRE DATE], DAY)
+
+Expired Flag =
+IF([Days Until Expiration] <= 0, "Expired", "Active")
+
+Risk Category =
+IF([Days Until Expiration] <= 0, "Expired",
+IF([Days Until Expiration] <= 10, "High Risk",
+IF([Days Until Expiration] <= 20, "Medium Risk",
+IF([Days Until Expiration] <= 30, "Low Risk",
+IF([Days Until Expiration] <= 180, "Low Risk")))))
+
+Query example = 
+EVALUATE
+FILTER(
+  'HHC COMSEC',
+  'HHC COMSEC'[Days Until Expiration] <= 7
+)
+
+Conditional Expression = 
+length(body('Run_a_query_against_a_dataset')?['FirstTableRows']) is greater than 0
+
+
