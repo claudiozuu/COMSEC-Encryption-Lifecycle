@@ -1,0 +1,1 @@
+IF([Days Until Expiration] <= 0, "Expired", "Active")
